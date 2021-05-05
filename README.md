@@ -4,3 +4,4 @@ Repositorio de prueba
 -Kevin Meza
 
 -Marco Antonio Camalich Pérez (A01351725)
+- Rogelio Guzman Cruzado a01639914
