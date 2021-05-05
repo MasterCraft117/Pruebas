@@ -1,12 +1,9 @@
 # Pruebas
 Repositorio de prueba
 ## Integrantes
-- Kevin Meza
-- Marco Antonio Camalich Pérez (A01351725)
+-Kevin Meza
+
+-Marco Antonio Camalich Pérez (A01351725)
 - Rogelio Guzman Cruzado a01639914
-<<<<<<< Updated upstream
 
 -Alejandro Paredes Balgañon A01351746
-=======
-- Alejandro Paredes Balgañon A01351746
->>>>>>> Stashed changes
