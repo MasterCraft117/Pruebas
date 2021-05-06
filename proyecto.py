@@ -16,6 +16,7 @@ while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(
     decision = int(input("Digite su elección: "))
 
 while cap.isOpened()and decision==6:
+    print('Gracias por utilizar la interfaz de filtros')
     ret, img = cap.read()
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     cv2.GaussianBlur(img_gray, (11,11), 0, img_gray)
@@ -25,32 +26,35 @@ while cap.isOpened()and decision==6:
     if k==27:
         break
 while cap.isOpened()and decision==1:
+    print('Gracias por utilizar la interfaz de filtros')
     ret, img = cap.read()
     k = cv2.waitKey(10)
     if k==27:
         break
 while cap.isOpened()and decision==2:
+    print('Gracias por utilizar la interfaz de filtros')
     ret, img = cap.read()
     k = cv2.waitKey(10)
     if k==27:
         break
 while cap.isOpened()and decision==3:
+    print('Gracias por utilizar la interfaz de filtros')
     ret, img = cap.read()
     k = cv2.waitKey(10)
     if k==27:
         break
 while cap.isOpened()and decision==4:
+    print('Gracias por utilizar la interfaz de filtros')
     ret, img = cap.read()
     k = cv2.waitKey(10)
     if k==27:
         break
 while cap.isOpened()and decision==5:
+    print('Gracias por utilizar la interfaz de filtros')
     ret, img = cap.read()
     k = cv2.waitKey(10)
     if k==27:
         break
-
-
 print('Gracias por utilizar la interfaz de filtros')
 cap.release()
 cv2.destroyAllWindows()
