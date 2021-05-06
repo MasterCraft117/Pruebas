@@ -1,8 +1,8 @@
 # Deteccion y contador de objetos por contornos.
 
-## Autor de branch.
+## Autor de branch:
 
-- Rogelio Guzmán Cruzado
+- Rogelio Guzmán Cruzado.
 
 ## Referencias:
 - https://www.youtube.com/watch?v=jYSdkLBzD88&ab_channel=OMES
