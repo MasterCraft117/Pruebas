@@ -4,7 +4,7 @@
 
 import cv2
 
-img = cv2.imread('prueba2.jpg')
+img = cv2.imread('imagen.jpg')
 grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 edges = cv2.Canny(grayscale, 100, 200)
 
