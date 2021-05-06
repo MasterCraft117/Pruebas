@@ -5,8 +5,11 @@ con = 0
 print('¡Bienvenido a la interfaz de OpenCv!')
 print('¡Aprende todo lo que puede realizar esta herramienta computacional!')
 print('Opciones')
-print('')
-print('')
+print('1: ')
+print('2: Detección de movimiento')
+print('3: ')
+print('4: ')
+print('5: ')
 decision = int(input("Digite su elección: "))
 while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)):
     decision = int(input("Digite su elección: "))
