@@ -9,7 +9,7 @@ Repositorio de prueba
 ## Descripción
 El proyecto consta del uso del Lenguaje de Programación Python con su herramienta OpenCv, el cuál utiliza la cámara del dispositivo para realizar diferentes modificaciones visuales. Este se utiliza por medio de una interfaz generada por la consola del IDLE que genera un ingreso de datos equivalente a un número entre el 0 y el 6 dependiendo de la acción que se desee ejecutar. El código ejecutable lleva de nombre 'proyecto.py'. Las actividades realizadas por la aplicación y su respectivo número son las siguientes:
 - 1:
-- 2: Detección de Movimientos:
+- 2: Detección de Movimientos: El código de detección de movimientos se encarga de observar cambios en el exacto lugar de movimiento de un cuadro de video en contraste con el fotograma anterior, denotando esa sección por medio de cuadrículas color verde que van cambiando con el tiempo si la cuadrícula de video observada por la cámara del dispositivo sigue viéndose modificada por la constante alteración de colores, sombras y figuras.
 - 3:
 - 4: Detector de Rasgos Faciales: Para generar el código de detección de rasgos faciales, se integraron el programa de detección de caras, detección de ojos y detección de sonrisas. Por lo que el código a ejecutar es el Detector_Rasgos_Faciales.py. Lo que hace el programa es generar cuadros que identifican la sonrisa, los ojos y la cara de las personas.
 - 5: 
