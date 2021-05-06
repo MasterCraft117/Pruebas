@@ -7,9 +7,9 @@ Repositorio de prueba
 - Alejandro Paredes Balgañon A01351746
 - Diego Navarro Aguilar A01640436
 ## Descripción
-El proyecto consta del uso del Lenguaje de Programación Python con su herramienta OpenCv, el cuál utiliza la cámara del dispositivo para realizar diferentes modificaciones visuales. Este se utiliza por medio de una interfaz generada por la consola del IDLE que genera un ingreso de datos equivalente a un número entre el 0 y el 6 dependiendo de la acción que se desee ejecutar. Las actividades realizadas por la aplicación y su respectivo número son las siguientes:
+El proyecto consta del uso del Lenguaje de Programación Python con su herramienta OpenCv, el cuál utiliza la cámara del dispositivo para realizar diferentes modificaciones visuales. Este se utiliza por medio de una interfaz generada por la consola del IDLE que genera un ingreso de datos equivalente a un número entre el 0 y el 6 dependiendo de la acción que se desee ejecutar. El código ejecutable lleva de nombre 'proyecto.py'. Las actividades realizadas por la aplicación y su respectivo número son las siguientes:
 - 1:
-- 2:
+- 2: Detección de Movimientos:
 - 3:
 - 4:
 - 5:
