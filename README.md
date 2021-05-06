@@ -22,3 +22,4 @@ El proyecto consta del uso del Lenguaje de Programación Python con su herramien
 - 4: Detección de caras: https://www.youtube.com/watch?v=J1jlm-I1cTs&t=225s
 - https://github.com/opencv/opencv/tree/master/data/haarcascades
 - 5: 
+
