@@ -11,7 +11,7 @@ while cap.isOpened():
     cv2.GaussianBlur(img_gray, (11,11), 0, img_gray)
     edges = cv2.Canny(img_gray,10,20,apertureSize = 3)
     
-    cv2.imshow("Faces found", edges)
+    cv2.imshow("Deteccion de bordes", edges)
     
     k = cv2.waitKey(10)
     if k==27:
