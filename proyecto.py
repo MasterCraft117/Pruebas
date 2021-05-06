@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import msvcrt
+from contadorobjetos import contadorobjetos
 
 cap = cv2.VideoCapture(0) #0 local o primary camera
 con = 0
@@ -12,7 +13,7 @@ print('¡Aprende todo lo que puede realizar esta herramienta computacional!')
 print('Opciones')
 print('1: ')
 print('2: Detección de movimiento')
-print('3: ')
+print('3: Contador de objetos')
 print('4: Detector Rasgos Faciales')
 print('5: ')
 print('6: Filtro gaussiano, Canny y detección de bordes')
@@ -43,7 +44,7 @@ while cap.isOpened()and decision==2:
     ret, img = cap.read()
     #BGR to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    
+
 
     if i == 20:
         bgGray = gray
@@ -57,17 +58,15 @@ while cap.isOpened()and decision==2:
                 x,y,w,h = cv2.boundingRect(c)
                 cv2.rectangle(img, (x,y), (x+w,y+h),(0,255,0),2)
     cv2.imshow('Imagen', img)
-         
+
 
     i = i+1
     k = cv2.waitKey(10)
     if k==27:
         break
-while cap.isOpened()and decision==3:
-    ret, img = cap.read()
-    k = cv2.waitKey(10)
-    if k==27:
-        break
+if decision==3:
+    contadorobjetos()
+
 while cap.isOpened()and decision==4:
     ret, img = cap.read()
     img_gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -88,7 +87,7 @@ while cap.isOpened()and decision==4:
     k = cv2.waitKey(10)
     if k==27:
         break
-        
+
 while cap.isOpened()and decision==5:
     ret, img = cap.read()
     k = cv2.waitKey(10)
@@ -99,4 +98,3 @@ cap.release()
 cv2.destroyAllWindows()
 print("Presione una tecla para cerrar...")
 msvcrt.getch()
-
