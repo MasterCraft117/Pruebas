@@ -1,6 +1,6 @@
 # Deteccion y contador de objetos por contornos.
 
-## Integrantes
+## Autor de branch.
 
 - Rogelio Guzman 
 
