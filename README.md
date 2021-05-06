@@ -19,7 +19,7 @@ El proyecto consta del uso del Lenguaje de Programación Python con su herramien
 - 1: 
 - 2: Detección de Movimiento: https://www.youtube.com/watch?v=kcmJQzu_q6M
 - 3: Contador de objetos: https://www.youtube.com/watch?v=jYSdkLBzD88&ab_channel=OMES
-- 4: Detección de caras: https://www.youtube.com/watch?v=J1jlm-I1cTs&t=225s
-https://github.com/opencv/opencv/tree/master/data/haarcascades
+- 4.1: Detección de caras: https://www.youtube.com/watch?v=J1jlm-I1cTs&t=225s
+- 4.2: https://github.com/opencv/opencv/tree/master/data/haarcascades
 - 5: 
 
