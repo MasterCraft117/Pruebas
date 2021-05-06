@@ -10,11 +10,12 @@ print('2: Detección de movimiento')
 print('3: ')
 print('4: ')
 print('5: ')
-decision = int(input("Digite su elección: "))
-while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)):
+print('6: Filtro gaussiano, Canny y detección de bordes')
+decision = int(input("Digite solamente el número de su elección: "))
+while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)(decision != 6)):
     decision = int(input("Digite su elección: "))
 
-while cap.isOpened()and decision==1:
+while cap.isOpened()and decision==6:
     ret, img = cap.read()
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     cv2.GaussianBlur(img_gray, (11,11), 0, img_gray)
@@ -23,7 +24,11 @@ while cap.isOpened()and decision==1:
     k = cv2.waitKey(10)
     if k==27:
         break
-
+while cap.isOpened()and decision==1:
+    ret, img = cap.read()
+    k = cv2.waitKey(10)
+    if k==27:
+        break
 while cap.isOpened()and decision==2:
     ret, img = cap.read()
     k = cv2.waitKey(10)
