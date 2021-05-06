@@ -36,6 +36,7 @@ while cap.isOpened()and decision==1:
     k = cv2.waitKey(10)
     if k==27:
         break
+i = 0
 while cap.isOpened()and decision==2:
             #BGR image feed from camera
     ret, img = cap.read()
