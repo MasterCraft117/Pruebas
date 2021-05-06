@@ -11,14 +11,10 @@ El proyecto consta del uso del Lenguaje de Programación Python con su herramien
 - 1:
 - 2: Detección de Movimientos:
 - 3:
-- 4:
-- 5: Detector de Rasgos Faciales: Para generar el código de detección de rasgos faciales, se integraron el programa de detección de caras, detección de ojos y detección de sonrisas. Por lo que el código a ejecutar es el Detector_Rasgos_Faciales.py
-Lo que hace el programa es generar cuadros que identifican la sonrisa, los ojos y la cara.
+- 4: Detector de Rasgos Faciales: Para generar el código de detección de rasgos faciales, se integraron el programa de detección de caras, detección de ojos y detección de sonrisas. Por lo que el código a ejecutar es el Detector_Rasgos_Faciales.py. Lo que hace el programa es generar cuadros que identifican la sonrisa, los ojos y la cara de las personas.
+- 5: 
 - 6: Filtro Gaussiano, Canny y Detección de Bordes
 - 0: No ejecutar ningún proceso y salir.
-## Programa de detección de rasgos faciales
-Para generar el código de detección de rasgos faciales, se integraron el programa de detección de caras, detección de ojos y detección de sonrisas. Por lo que el código a ejecutar es el Detector_Rasgos_Faciales.py
-Lo que hace el programa es generar cuadros que identifican la sonrisa, los ojos y la cara.
 ## Referencias
 - 1: 
 - 2: Detección de Movimiento: https://www.youtube.com/watch?v=kcmJQzu_q6M
