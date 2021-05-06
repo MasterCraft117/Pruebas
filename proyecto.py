@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture(1) #0 local o primary camera
+cap = cv2.VideoCapture(0) #0 local o primary camera
 con = 0
 print('¡Bienvenido a la interfaz de OpenCv!')
 print('¡Aprende todo lo que puede realizar esta herramienta computacional!')
