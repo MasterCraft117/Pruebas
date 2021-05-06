@@ -46,6 +46,9 @@ while cap.isOpened()and decision==3:
         break
 while cap.isOpened()and decision==4:
     print('Gracias por utilizar la interfaz de filtros')
+    faceClassif = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    faceClassif2 = cv2.CascadeClassifier('haarcascade_smile.xml')
+    faceClassif3 = cv2.CascadeClassifier('haarcascade_eye.xml')
     ret, img = cap.read()
     k = cv2.waitKey(10)
     if k==27:
