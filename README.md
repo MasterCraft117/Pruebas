@@ -16,7 +16,7 @@ El proyecto consta del uso del Lenguaje de Programación Python con su herramien
 - 6: Filtro Gaussiano y Canny para detección de Bordes
 - 0: No ejecutar ningún proceso y salir.
 ## Referencias
-- 1: Detección de figuras: https://omes-va.com/detectando-figuras-geometricas-con-opencv-python/
+- 1: Deteccion de figuras: https://omes-va.com/detectando-figuras-geometricas-con-opencv-python/
 - 2: Detección de Movimiento: https://www.youtube.com/watch?v=kcmJQzu_q6M
 - 3: Contador de objetos: https://www.youtube.com/watch?v=jYSdkLBzD88&ab_channel=OMES
 - 4.1: Detección de caras: https://www.youtube.com/watch?v=J1jlm-I1cTs&t=225s
