@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 cap = cv2.VideoCapture(0) #0 local o primary camera
 con = 0
@@ -36,7 +37,27 @@ while cap.isOpened()and decision==1:
     if k==27:
         break
 while cap.isOpened()and decision==2:
+            #BGR image feed from camera
     ret, img = cap.read()
+    #BGR to grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+
+    if i == 20:
+        bgGray = gray
+    if i > 20:
+        dif = cv2.absdiff(gray, bgGray)
+        _, th = cv2.threshold(dif, 40, 255, cv2.THRESH_BINARY)
+        cnts, _ = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        for c in cnts:
+            area = cv2.contourArea(c)
+            if area > 9000:
+                x,y,w,h = cv2.boundingRect(c)
+                cv2.rectangle(img, (x,y), (x+w,y+h),(0,255,0),2)
+    cv2.imshow('Imagen', img)
+         
+
+    i = i+1
     k = cv2.waitKey(10)
     if k==27:
         break
