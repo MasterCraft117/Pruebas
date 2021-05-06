@@ -1,5 +1,5 @@
 # Pruebas
-Repositorio de prueba
+Repositorio de prueba con la libreria OpenCV para Python 3
 ## Integrantes
 - Kevin Meza A01639770
 - Marco Antonio Camalich Pérez A01351725
