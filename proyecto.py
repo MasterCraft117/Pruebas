@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import msvcrt
 
-cap = cv2.VideoCapture(1) #0 local o primary camera
+cap = cv2.VideoCapture(0) #0 local o primary camera
 con = 0
 faceClassif = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 faceClassif2 = cv2.CascadeClassifier('haarcascade_smile.xml')
