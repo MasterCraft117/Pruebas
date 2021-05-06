@@ -11,6 +11,7 @@ print('3: ')
 print('4: ')
 print('5: ')
 print('6: Filtro gaussiano, Canny y detección de bordes')
+print('0: Salir')
 decision = int(input("Digite solamente el número de su elección: "))
 while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)(decision != 6)):
     decision = int(input("Digite su elección: "))
