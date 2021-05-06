@@ -13,7 +13,7 @@ El proyecto consta del uso del Lenguaje de Programación Python con su herramien
 - 3: Deteccion de objetos en una imagen: Este programa detecta el número de objetos en una imagen usando un sistema de delineación y acentuación de bordes que define si se está mostrando en pantalla un objeto o no, el proceso se resume en lectura de imagen, conversion a escala de grises, delineación de bordes, y conteo del número de bordes detectados.
 - 4: Detector de Rasgos Faciales: Para generar el código de detección de rasgos faciales, se integraron el programa de detección de caras, detección de ojos y detección de sonrisas. Por lo que el código a ejecutar es el Detector_Rasgos_Faciales.py. Lo que hace el programa es generar cuadros que identifican la sonrisa, los ojos y la cara de las personas.
 - 5: 
-- 6: Filtro Gaussiano, Canny y Detección de Bordes
+- 6: Filtro Gaussiano y Canny para detección de Bordes
 - 0: No ejecutar ningún proceso y salir.
 ## Referencias
 - 1: Detección de figuras: https://omes-va.com/detectando-figuras-geometricas-con-opencv-python/
