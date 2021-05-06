@@ -13,9 +13,11 @@ print('5: ')
 print('6: Filtro gaussiano, Canny y detección de bordes')
 print('0: Salir')
 decision = int(input("Digite solamente el número de su elección: "))
+
 while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)(decision != 6)):
     decision = int(input("Digite su elección: "))
 print('Gracias por utilizar la interfaz de filtros')
+
 while cap.isOpened()and decision==6:
     ret, img = cap.read()
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
