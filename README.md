@@ -1,5 +1,6 @@
 # Pruebas
 Repositorio de prueba con la libreria OpenCV para Python 3
+- Para probar el programa correr el archivo "proyecto.py"
 ## Integrantes/Colaboradores
 - Kevin Meza A01639770
 - Marco Antonio Camalich Pérez A01351725
