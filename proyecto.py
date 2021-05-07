@@ -3,6 +3,20 @@ import numpy as np
 import msvcrt
 from contadorobjetos import contadorobjetos
 
+def dibujar(mask,color):
+    contornos,__=cv2.findContours(mask,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    for c in contornos:
+        area=cv2.contourArea(c)
+        if area > 3000:
+            M=cv2.moments(c)
+            if (M["m00"]==0): M["m00"]=1
+            x=int(M["m10"]/M["m00"])
+            y=int(M["m01"]/M["m00"])
+            nuevoContorno=cv2.convexHull(c)
+            cv2.circle(frame,(x,y),7,(0,255,0),-1)
+            cv2.putText(frame,'{},{}'.format(x,y),(x+10,y),font,0.75,(0,255,0),1,cv2.LINE_AA)
+            cv2.drawContours(frame,[nuevoContorno],0,color,3)
+
 cap = cv2.VideoCapture(0) #0 local o primary camera
 con = 0
 faceClassif = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -15,7 +29,7 @@ print('1: Detección de figuras')
 print('2: Detección de movimiento')
 print('3: Contador de objetos')
 print('4: Detector Rasgos Faciales')
-print('5: ')
+print('5: Detector de colores')
 print('6: Filtro gaussiano, Canny y detección de bordes')
 print('0: Salir')
 decision = int(input("Digite solamente el número de su elección: "))
@@ -33,6 +47,7 @@ while cap.isOpened()and decision==6:
     k = cv2.waitKey(10)
     if k==27:
         break
+    
 while cap.isOpened()and decision==1:
     image = cv2.imread('figurasColores2.png')
 
@@ -129,12 +144,40 @@ while cap.isOpened()and decision==4:
         break
 
 while cap.isOpened()and decision==5:
-    ret, img = cap.read()
-    k = cv2.waitKey(10)
-    if k==27:
-        break
+    cap=cv2.VideoCapture(0)
+
+    azulBajo=np.array([100,100,20],np.uint8)
+    azulAlto=np.array([125,255,255],np.uint8)
+
+    amarilloBajo=np.array([15,100,20],np.uint8)
+    amarilloAlto=np.array([45,255,255],np.uint8)
+
+    redBajo1=np.array([0,100,20],np.uint8)
+    redAlto1=np.array([5,255,255],np.uint8)
+
+    redBajo2=np.array([175,100,20],np.uint8)
+    redAlto2=np.array([179,255,255],np.uint8)
+
+    font=cv2.FONT_HERSHEY_SIMPLEX
+    print('Presiona "S" para salir')
+    while True:
+        ret,frame=cap.read()
+        if ret==True:
+            frameHSV=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
+            maskAzul=cv2.inRange(frameHSV,azulBajo,azulAlto)
+            maskAmarillo=cv2.inRange(frameHSV,amarilloBajo,amarilloAlto)
+            maskRed1=cv2.inRange(frameHSV,redBajo1,redAlto1)
+            maskRed2=cv2.inRange(frameHSV,redBajo2,redAlto2)
+            maskRed=cv2.add(maskRed1,maskRed2)
+            dibujar(maskAzul,(255,0,0))
+            dibujar(maskAmarillo,(0,255,255))
+            dibujar(maskRed,(0,0,255))
+            cv2.imshow('frame',frame)
+            if cv2.waitKey(1) & 0xFF == ord('s'):
+                break
+    break
 
 cap.release()
 cv2.destroyAllWindows()
-print("Presione una tecla para cerrar...")
+#print("Presione una tecla para cerrar...")
 #msvcrt.getch()
