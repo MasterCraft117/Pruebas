@@ -22,7 +22,7 @@ con = 0
 faceClassif = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 faceClassif2 = cv2.CascadeClassifier('haarcascade_smile.xml')
 faceClassif3 = cv2.CascadeClassifier('haarcascade_eye.xml')
-print('¡Bienvenido a la interfaz de OpenCv!')
+print('¡Bienvenido a la interfaz de OpenCv!') #Inicio e impresión de opciones del menú
 print('¡Aprende todo lo que puede realizar esta herramienta computacional!')
 print('Opciones')
 print('1: Detección de figuras')
@@ -32,9 +32,9 @@ print('4: Detector Rasgos Faciales')
 print('5: Detector de colores')
 print('6: Filtro gaussiano, Canny y detección de bordes')
 print('0: Salir')
-decision = int(input("Digite solamente el número de su elección: "))
+decision = int(input("Digite solamente el número de su elección: ")) #Colocación de un número del 0 al 6
 
-while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)and(decision != 6)):
+while ((decision != 0)and(decision != 1)and(decision != 2)and(decision != 3)and(decision != 4)and(decision != 5)and(decision != 6)): #Ciclo que evita que se coloquen números desconocidos
     decision = int(input("Digite su elección: "))
 print('Gracias por utilizar la interfaz de filtros')
 
@@ -94,13 +94,13 @@ while cap.isOpened()and decision==1:
     break
     
 i = 0
-while cap.isOpened()and decision==2:
+while cap.isOpened()and decision==2: #Inicio de código de detección de movimiento
             #BGR image feed from camera
-    ret, img = cap.read()
+    ret, img = cap.read() #Lector de fotogramas
     #BGR to grayscale
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #Conversión a Blanco y Negro
 
-
+    #Sección de código que lee hasta cierto fotograma con condicionales y coloca contornos identificando el fondo para posteriormente observar el cambio en la pantalla..
     if i == 20:
         bgGray = gray
     if i > 20:
@@ -109,16 +109,16 @@ while cap.isOpened()and decision==2:
         cnts, _ = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         for c in cnts:
             area = cv2.contourArea(c)
-            if area > 9000:
+            if area > 9000: #Definición del área observable
                 x,y,w,h = cv2.boundingRect(c)
-                cv2.rectangle(img, (x,y), (x+w,y+h),(0,255,0),2)
-    cv2.imshow('Imagen', img)
+                cv2.rectangle(img, (x,y), (x+w,y+h),(0,255,0),2) #Impresión de rectángulo que identifica movimiento
+    cv2.imshow('Imagen', img) #Impresión de la imagen en tiempo real
 
 
-    i = i+1
+    i = i+1 #Suma del contador de fotogramas
     k = cv2.waitKey(10)
     if k==27:
-        break
+        break #Break del programa
 if decision==3:
     contadorobjetos()
 
@@ -178,6 +178,6 @@ while cap.isOpened()and decision==5:
     break
 
 cap.release()
-cv2.destroyAllWindows()
-#print("Presione una tecla para cerrar...")
-#msvcrt.getch()
+cv2.destroyAllWindows() #Cierre del proceso de cámara
+print("Presione una tecla para cerrar...") #Break funcional a la espera de una tecla
+msvcrt.getch()
