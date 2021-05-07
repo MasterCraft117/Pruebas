@@ -19,6 +19,7 @@ def dibujar(mask,color):
 
 cap = cv2.VideoCapture(0) #0 local o primary camera
 con = 0
+#clasificadores de openCV
 faceClassif = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 faceClassif2 = cv2.CascadeClassifier('haarcascade_smile.xml')
 faceClassif3 = cv2.CascadeClassifier('haarcascade_eye.xml')
@@ -122,12 +123,14 @@ while cap.isOpened()and decision==2: #Inicio de código de detección de movimie
 if decision==3:
     contadorobjetos()
 
-while cap.isOpened()and decision==4:
+while cap.isOpened()and decision==4: #Inicio de código de detección de rasgos faciales
     ret, img = cap.read()
     img_gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #se crea una varable con cada clasificador
     faces = faceClassif.detectMultiScale(img_gray, 1.3, 5)
     smile=faceClassif2.detectMultiScale(img_gray, 1.3, 5)
     eye=faceClassif3.detectMultiScale(img_gray, 1.3, 5)
+    #creará un rectangulo cuando detecte una cara, una sonrisa o unos ojos
     for (x,y,w,h) in faces:
         cv2.rectangle(img, (x,y),(x+w,y+h),(0,255,0),2)
     for (x,y,w,h) in smile:
